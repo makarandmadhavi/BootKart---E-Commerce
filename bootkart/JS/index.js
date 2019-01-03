@@ -75,3 +75,27 @@ function login(){
         }
     });
 }
+
+function removecart(productid, userid){
+    //console.log(productid, userid);
+    $.ajax({
+        type: "POST",
+        url: "backend/removecart_ajax.php",
+        data: {
+            //data goes here
+            productid,
+            userid
+        },
+        success: function (data) {
+           //data is returned here
+            if(data == "SUCCESS"){
+                alert("Successfully removed from Cart");
+                window.location = 'cart.php';
+            }
+            else{
+                alert("Failed to remove, please try again later");
+            }
+        }
+    });
+
+}
