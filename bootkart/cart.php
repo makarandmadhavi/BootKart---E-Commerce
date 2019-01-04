@@ -30,7 +30,7 @@ else{
                 <h5 class="mt-0 mb-1"><?=$product['name']?> - Price = <?=$product['price']?></h5>
                 <p><?=$product['description']?></p>
                 <div class="btn-group btn-block">
-                <button class="btn btn-success btn-block">Place Order</button>
+                <button onclick="placeorder('<?=$product['id']?>','<?=$id?>')" class="btn btn-success btn-block">Place Order</button>
                 <button onclick="removecart(<?=$product['id']?>,<?=$id?>)" class="btn btn-danger ">Remove item</button>
                 </div>
             </div>

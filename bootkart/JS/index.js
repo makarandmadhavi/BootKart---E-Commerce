@@ -99,3 +99,27 @@ function removecart(productid, userid){
     });
 
 }
+
+function placeorder(productid, userid){
+    //console.log(productid, userid);
+    $.ajax({
+        type: "POST",
+        url: "backend/placeorder_ajax.php",
+        data: {
+            //data goes here
+            productid,
+            userid
+        },
+        success: function (data) {
+           //data is returned here
+            if(data == "SUCCESS"){
+                alert("Order Placed!");
+                window.location = 'cart.php';
+            }
+            else{
+                alert("Failed to place order, please try again later");
+            }
+        }
+    });
+
+}
