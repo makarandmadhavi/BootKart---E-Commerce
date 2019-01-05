@@ -10,10 +10,10 @@
         $username='User';
     }
     if(isset($_GET['category'])){
-        $category = $_GET['category'];
+        //$category = $_GET['category'];
         $products = getproductsbycategory($category);
     }else{
-        $category='Our Products';
+        //$category='Our Products';
         $products = getallproducts();
     }
     //echo $_GET['category'];
