@@ -30,3 +30,64 @@ function addproduct(){
     });
 
 }
+
+function editproduct(id){
+    name = $('#name').val();
+    price = $('#price').val();
+    description = $('#description').val();
+    img = $('#img').val();
+    category = $('#category').val();
+
+
+    $.ajax({
+        type: "POST",
+        url: "backend/editproduct_ajax.php",
+        data: {
+            //data goes here
+            id,
+            name,
+            price,
+            description,
+            img,
+            category
+        },
+        success: function (data) {
+           //data is returned here
+            if(data == "SUCCESS"){
+                alert("Product Edited!");
+                window.location = 'home.php';
+            }
+            else{
+                alert("Failed to edit product, please try again later");
+            }
+        }
+    });
+
+}
+
+
+function removeproduct(id){
+
+
+    $.ajax({
+        type: "POST",
+        url: "backend/removeproduct_ajax.php",
+        data: {
+            //data goes here
+            id
+        },
+        success: function (data) {
+           //data is returned here
+            if(data == "SUCCESS"){
+                alert("Product Deleted!");
+                window.location = 'home.php';
+            }
+            else{
+                alert("Failed to delete product, please try again later");
+            }
+            console.log(id);
+        }
+        
+    });
+
+}

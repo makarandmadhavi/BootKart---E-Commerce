@@ -12,7 +12,7 @@ include 'backend/onlyadmin.php';
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <title>BootKart</title>
-    <link rel="shortcut icon" type="image/png" href="booticon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="../booticon.ico"/>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -32,9 +32,9 @@ include 'backend/onlyadmin.php';
       <li class="nav-item">
         <a class="nav-link" href="index.php?category=TVs">View Orders</a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" href="index.php?category=Laptops">Laptops</a>
-      </li>
+      </li> -->
      
      
     </ul>
