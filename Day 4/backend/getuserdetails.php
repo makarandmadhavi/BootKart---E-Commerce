@@ -1,6 +1,6 @@
 <?php
     
-    function getuserdetails(){
+    function getallusers(){
         include 'conn.php';
         $data =array();
         $sql = "SELECT * FROM login";

@@ -30,7 +30,7 @@ include 'backend/onlyadmin.php';
         <a class="nav-link" href="addproducts.php">Add Products</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="index.php?category=TVs">View Orders</a>
+        <a class="nav-link" href="orders.php">View Orders</a>
       </li>
       <!-- <li class="nav-item">
         <a class="nav-link" href="index.php?category=Laptops">Laptops</a>
