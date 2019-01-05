@@ -37,7 +37,7 @@ if(isset($_GET['category'])){
         <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item" >
-        <a class="nav-link" href="index.php?category=Mobiles" >Mobiles</a>
+        <a class="nav-link" href="index.php?category=Mobiles" > Mobiles </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="index.php?category=TVs">TVs</a>
