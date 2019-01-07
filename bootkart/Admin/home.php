@@ -13,7 +13,7 @@
             
             <div class="card" style="">
             <!-- <h5 class="text-right" style="margin:5px;color:grey;">X</h5> -->
-                <img class="card-img-top" src="<?=$product['img']?>" alt="Card image cap">
+                <img class="card-img-top" style="width:640px height:480px" src="<?=$product['img']?>" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title"><?=$product['name']?> - Rs.<?=$product['price']?></h5>
                     <p class="card-text"><?=$product['description']?></p>      

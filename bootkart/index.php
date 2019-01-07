@@ -17,6 +17,8 @@
         $products = getallproducts();
     }
     //echo $_GET['category'];
+
+    //echo sha1("boot");
 ?>
 
 <div class="jumbotron">
@@ -47,7 +49,7 @@
                     <p class="card-text"><?=$product['description']?></p>
                     <a href="detail.php?id=<?=$product['id']?>" class="btn btn-primary">View Product</a>
                     <?php if(isset($_SESSION['username'])){ ?>
-                    <a onclick="addtocart('<?=$product['id']?>','<?=$id?>')" class="btn btn-success">Add to cart</a>
+                    <button onclick="addtocart('<?=$product['id']?>','<?=$id?>')" class="btn btn-success">Add to cart</button>
                     <?php } ?>
                 </div>
             </div>

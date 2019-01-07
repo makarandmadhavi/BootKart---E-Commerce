@@ -1,6 +1,7 @@
 <?php include "templates/header.php"; ?>
 <?php include "backend/getproducts.php"; 
 $id = $_GET['id'];
+$userid = $_SESSION['id'];
 $product = getsingleproduct($id);
 //print_r($product);
 ?>
@@ -12,7 +13,7 @@ $product = getsingleproduct($id);
     <h1>Price - Rs.<?=$product['price']?></h1>
     <p><?=$product['description']?></p>
     <?php if(isset($_SESSION['username'])){ ?>
-    <button onclick="addtocart('<?=$product['id']?>','<?=$id?>')" class="btn btn-success">Add To Cart</button>
+    <button onclick="addtocart('<?=$product['id']?>','<?=$userid?>')" class="btn btn-success">Add To Cart</button>
     <?php } ?>
 </div>
 <br><br><br>
