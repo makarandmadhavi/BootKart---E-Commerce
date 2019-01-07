@@ -1,4 +1,9 @@
 <?php include 'templates/header.php'; ?>
+<?php include 'backend/getproducts.php';
+
+$categories = getcategories();
+//print_r($categories);
+?>
 
 <div class="container">
     <h1>Add a Product</h1>
@@ -21,9 +26,11 @@
   <div class="form-group">
     <label for="exampleInputPassword1">Category</label>
     <select class="form-control" id="category">
-        <option value="Mobiles">Mobiles</option>
-        <option value="TVs">TVs</option>
-        <option value="Laptops">Laptops</option>
+        <?php foreach($categories as $category){ ?>
+        <option value="<?=$category['category']?>"><?=$category['category']?></option>
+        <?php } ?>
+        <!-- <option value="TVs">TVs</option>
+        <option value="Laptops">Laptops</option> -->
     </select>
   </div>
   <div>

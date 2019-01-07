@@ -1,3 +1,4 @@
+<?php include "backend/getproducts.php"; ?>
 <?php
 session_start();
 
@@ -8,7 +9,7 @@ if(isset($_GET['category'])){
   $category='Our Products';
   //$products = getallproducts();
 }
-
+  
 ?>
 
 <?php include "backend/onlyuser.php"; ?>
@@ -22,7 +23,7 @@ if(isset($_GET['category'])){
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <title>BootKart</title>
-    <link rel="shortcut icon" type="image/png" href="booticon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="../booticon.ico"/>
 </head>
 <body>
 <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-light bg-light" >
@@ -31,20 +32,28 @@ if(isset($_GET['category'])){
     <span class="navbar-toggler-icon"></span>
   </button>
 
+  <?php 
+  $categories = getcategories();
+  //print_r($categories); 
+  ?>
+
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
       </li>
+
+      <?php foreach($categories as $cat){ ?>  
       <li class="nav-item" >
-        <a class="nav-link" href="index.php?category=Mobiles" > Mobiles </a>
+        <a class="nav-link" href="index.php?category=<?=$cat['category']?>" > <?=$cat['category']?> </a>
       </li>
-      <li class="nav-item">
+      <?php } ?>
+      <!-- <li class="nav-item">
         <a class="nav-link" href="index.php?category=TVs"> TVs </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="index.php?category=Laptops"> Laptops </a>
-      </li>
+      </li> -->
      
      
     </ul>

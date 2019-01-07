@@ -1,7 +1,9 @@
 <?php include "templates/header.php"; ?>
-<?php include "backend/getproducts.php"; 
+<?php
 $id = $_GET['id'];
+if(isset($_SESSION['id'])){
 $userid = $_SESSION['id'];
+}
 $product = getsingleproduct($id);
 //print_r($product);
 ?>

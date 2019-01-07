@@ -91,3 +91,27 @@ function removeproduct(id){
     });
 
 }
+
+function addcategory(){
+    category = $('#category').val();
+    console.log(category);
+    $.ajax({
+        type: "POST",
+        url: "backend/addcategory_ajax.php",
+        data: {
+            //data goes here
+            category
+        },
+        success: function (data) {
+           //data is returned here
+            if(data == "SUCCESS"){
+                alert("Category Added");
+                window.location = 'home.php';
+            }
+            else{
+                alert("Failed to add category, please try again later");
+            }
+        }
+    });
+
+}

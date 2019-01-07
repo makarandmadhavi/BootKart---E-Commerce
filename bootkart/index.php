@@ -1,5 +1,5 @@
 <?php include "templates/header.php"; ?>
-<?php include "backend/getproducts.php"; ?>
+
 <?php
 
     if(isset($_SESSION['username'])){

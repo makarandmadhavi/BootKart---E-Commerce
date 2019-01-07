@@ -3,6 +3,7 @@ session_start();
 include 'backend/onlyadmin.php';
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,9 +33,9 @@ include 'backend/onlyadmin.php';
       <li class="nav-item">
         <a class="nav-link" href="orders.php">View Orders</a>
       </li>
-      <!-- <li class="nav-item">
-        <a class="nav-link" href="index.php?category=Laptops">Laptops</a>
-      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" href="addcategory.php">Add Category</a>
+      </li>
      
      
     </ul>
