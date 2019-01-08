@@ -106,10 +106,33 @@ function addcategory(){
            //data is returned here
             if(data == "SUCCESS"){
                 alert("Category Added");
-                window.location = 'home.php';
+                window.location = 'managecategories.php';
             }
             else{
                 alert("Failed to add category, please try again later");
+            }
+        }
+    });
+
+}
+
+function removecategory(id){
+    console.log(id);
+    $.ajax({
+        type: "POST",
+        url: "backend/removecategory_ajax.php",
+        data: {
+            //data goes here
+            id
+        },
+        success: function (data) {
+           //data is returned here
+            if(data == "SUCCESS"){
+                alert("Category Removed");
+                window.location = 'managecategories.php';
+            }
+            else{
+                alert("Failed to remove category, please try again later");
             }
         }
     });

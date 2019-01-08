@@ -34,7 +34,7 @@ include 'backend/onlyadmin.php';
         <a class="nav-link" href="orders.php">View Orders</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="addcategory.php">Add Category</a>
+        <a class="nav-link" href="managecategories.php">Manage Categories</a>
       </li>
      
      
