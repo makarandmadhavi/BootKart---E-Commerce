@@ -18,7 +18,7 @@
     }
     //echo $_GET['category'];
 
-    //echo sha1("boot");
+    //echo sha1("123");
 ?>
 
 <div class="jumbotron">

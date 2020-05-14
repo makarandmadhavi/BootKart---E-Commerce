@@ -46,7 +46,7 @@
                 <td>
                     <?=$product['price']?>
                 </td>
-                <td><a href="orders.php">some action</a></td>
+                <td><a href="orders.php">dispatch</a></td>
             </tr>
             <?php }  ?>
 

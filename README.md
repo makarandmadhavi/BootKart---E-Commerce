@@ -1,2 +1,0 @@
-# bootcamp
-First upload
