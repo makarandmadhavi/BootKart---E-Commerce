@@ -1,4 +1,4 @@
-# bootcamp
+# Bootkart - E commerce website
 First upload
 
 A simple E-commerce website for selling electronics based on LAMP stack
